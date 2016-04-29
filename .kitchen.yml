@@ -11,5 +11,7 @@ platforms:
 suites:
   - name: default
     run_list:
+      - recipe[chef-client::config]
       - recipe[httpd::default]
+      - recipe[httpd::ohai_plugin]
     attributes:
